@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import Nav from "./components/Nav";
+import CustomNav from "./components/Nav";
 import About from "./components/About";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import Calendar from "./components/Calendar";
 import Culture from "./components/Culture-History";
 import Membership from "./components/Membership";
+import Footer from "./components/Footer";
+
+import { Container } from "react-bootstrap";
 
 function App() {
   const [contactSelected, setContactSelected] = useState(false);
@@ -18,7 +21,7 @@ function App() {
   return (
     <div>
       <Container>
-        <Nav
+        <CustomNav
           contactSelected={contactSelected}
           setContactSelected={setContactSelected}
           aboutSelected={aboutSelected}
@@ -31,7 +34,7 @@ function App() {
           setGallerySelected={setGallerySelected}
           membershipSelected={membershipSelected}
           setMembershipSelected={setMembershipSelected}
-        ></Nav>
+        ></CustomNav>
       </Container>
 
       <main>
