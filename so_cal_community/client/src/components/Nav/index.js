@@ -37,10 +37,10 @@ function CustomNav(props) {
     if (target === 3) {
       setCultureSelected(true);
     }
-    if (target === 0) {
+    if (target === 4) {
       setGallerySelected(true);
     }
-    if (target === 0) {
+    if (target === 5) {
       setMembershipSelected(true);
     }
   }
@@ -78,7 +78,7 @@ function CustomNav(props) {
                 <>
                   <Nav.Link onClick={() => handleClick(2)}>
                     {" "}
-                    Portfolio{" "}
+                    Calendar{" "}
                   </Nav.Link>
                 </>
               )}
