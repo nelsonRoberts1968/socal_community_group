@@ -84,10 +84,12 @@ function App() {
         </Container>
       </main>
       <Container>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </Container>
     </div>
   );
 }
 
 export default App;
+
+
