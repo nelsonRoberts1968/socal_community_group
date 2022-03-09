@@ -2,35 +2,33 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const productSchema = new Schema({
+const membershipSchema = new Schema({
   name: {
     type: String,
     required: true,
     trim: true
   },
-  description: {
-    type: String
+  status: {
+    type: String,
+    required: true
   },
-  image: {
-    type: String
-  },
-  price: {
+  dues: {
     type: Number,
     required: true,
     min: 0.99
   },
-  quantity: {
-    type: Number,
-    min: 0,
-    default: 0
+  title: {
+    type: String,
+    required: true,
+    trim: true
   },
-  category: {
-    type: Schema.Types.ObjectId,
-    ref: 'Category',
-    required: true
+  email: {
+    type: String,
+    required: true,
   }
+ 
 });
 
-const Product = mongoose.model('Product', productSchema);
+const Membership = mongoose.model('Membership', membershipSchema);
 
-module.exports = Product;
+module.exports = Membership;
